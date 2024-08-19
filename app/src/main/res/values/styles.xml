@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BtnWelcome">
+        <item name="android:background">@drawable/btn_wellcome</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+</resources>
