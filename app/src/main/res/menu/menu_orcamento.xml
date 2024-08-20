@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_orcamento"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/cancelar_venda"
+        android:icon="@drawable/excluircompra"
+        android:title="@string/cancelarVenda"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/reimprimir_cupom_orc"
+        android:title="@string/action_reimprimir" />
+    <item
+        android:id="@+id/alterar_para_venda"
+        android:title="@string/alternar_para_venda" />
+    <item
+        android:id="@+id/alterar_para_venda_icon"
+        android:title="@string/alternar_para_venda"
+        android:icon="@drawable/vendas"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/efetivar_orcamento"
+        android:title="@string/efetivar_um_orcamento" />
+</menu>

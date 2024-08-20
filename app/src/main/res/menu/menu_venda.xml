@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_venda"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/cancelar_venda_icon"
+        android:icon="@drawable/excluircompra"
+        android:title="@string/cancelarVenda"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/reimprimir_cupom_icon"
+        android:icon="@drawable/reimrimircupom"
+        android:title="@string/action_reimprimir"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/alterar_orçamento_icon"
+        android:icon="@drawable/icone_orcamento"
+        android:title="@string/alternar_para_orcamento"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/cancelar_venda"
+        android:title="@string/cancelarVenda"
+        />
+    <item
+        android:id="@+id/reimprimir_cupom"
+        android:title="@string/action_reimprimir"
+        />
+    <item
+        android:id="@+id/alterar_orçamento"
+        android:title="@string/alternar_para_orcamento"
+        />
+</menu>

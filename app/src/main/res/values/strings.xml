@@ -1,4 +1,31 @@
 <resources>
     <string name="app_name">CrudAndroid</string>
     <string name="Wellcome">Bem Vindo</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="venda_menu">VENDA</string>
+    <string name="cadastro_menu">CADASTRO</string>
+    <string name="contador_menu">CONTADOR</string>
+    <string name="configurar_menu">CONFIGURAR</string>
+    <string name="suporte_menu">SUPORTE</string>
+    <string name="sair_menu">SAIR</string>
+    <string name="relatorio_menu">RELATORIO</string>
+
+    <string name="cancelarVenda">Cancelar venda</string>
+    <string name="action_reimprimir">Reimprimir cupom</string>
+    <string name="title_criarprod">CriarProd</string>
+    <string name="gaveta_aberta">GAVETA ABERTA</string>
+    <string name="caminhoPastaBancoInterno">/data/data/com.example.remarcaflexm8/databases</string>
+    <string name="alternar_para_venda">Alternar para venda</string>
+    <string name="efetivar_um_orcamento">Efetivar um orçamento</string>
+    <string name="alternar_para_orcamento">Alternar para orçamento</string>
 </resources>

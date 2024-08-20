@@ -49,6 +49,51 @@ public class DbInicial {
             Log.e("OnCreateTable","Tabela Usuario: "+e.getLocalizedMessage());
             return false;
         }
+        try{
+            db.execSQL("CREATE TABLE IF NOT EXISTS unidade " +
+                    "(idunidade INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "descricao varchar(50) NOT NULL, " +
+                    "sigla varchar(2), " +
+                    "precisao integer " +
+                    ");");
+            Log.i("OnCreateTable","Tabela Unidade criada com sucesso!");
+        }catch (SQLException e){
+            Log.e("OnCreateTable","Tabela Unidade: "+e.getLocalizedMessage());
+            return false;
+        }
+        try{
+            db.execSQL("CREATE TABLE IF NOT EXISTS categoria " +
+                    "(idcategoria INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "descricao varchar(50) NOT NULL, " +
+                    "cor varchar(20), " +
+                    "status boolean " +
+                    ");");
+            Log.i("OnCreateTable","Tabela Categoria criada com sucesso!");
+        }catch (SQLException e){
+            Log.e("OnCreateTable","Tabela Categoria: "+e.getLocalizedMessage());
+            return false;
+        }
+        try{
+            db.execSQL("CREATE TABLE IF NOT EXISTS produto " +
+                    "(idproduto INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "descricao varchar(50) NOT NULL, " +
+                    "preco numeric(12,2) NOT NULL, " +
+                    "quantestoque double NOT NULL DEFAULT 0, " +
+                    "codigoean varchar(14), " +
+                    "precovariavel boolean DEFAULT true, " +
+                    "idunidade INTEGER NOT NULL, " +
+                    "imagem varchar default 0, " +
+                    "idcategoria INTEGER NOT NULL, " +
+                    "status boolean, " +
+                    "FOREIGN KEY (idunidade) REFERENCES unidade (idunidade), " +
+                    "FOREIGN KEY (idcategoria) REFERENCES categoria (idcategoria)" +
+                    ");");
+            Log.i("OnCreateTable","Tabela Produto criada com sucesso!");
+        }catch (SQLException e){
+            Log.e("OnCreateTable","Tabela Produto: "+e.getLocalizedMessage());
+            return false;
+        }
+
 
         return insertDadosInicial(db);
     }
@@ -123,6 +168,72 @@ public class DbInicial {
             Log.i("OnInsert","Insert Usuario criada com sucesso!");
         }catch (SQLException e){
             Log.e("OnInsert","Insert Usuario: "+e.getLocalizedMessage());
+            return false;
+        }
+        try {
+            dados = new ContentValues();
+            dados.put("descricao", "Unidade");
+            dados.put("sigla", "UN");
+            dados.put("precisao", 0);
+            db.insert("unidade",null,dados);
+            dados.clear();
+            Log.i("OnInsert","Insert Unidade criada com sucesso!");
+        }catch (SQLException e){
+            Log.e("OnInsert","Insert Unidade: "+e.getLocalizedMessage());
+            return false;
+        }
+        try {
+            dados = new ContentValues();
+            dados.put("descricao", "Quilograma");
+            dados.put("sigla", "KG");
+            dados.put("precisao", 3);
+            db.insert("unidade",null,dados);
+            dados.clear();
+            Log.i("OnInsert","Insert Unidade criada com sucesso!");
+        }catch (SQLException e){
+            Log.e("OnInsert","Insert Unidade: "+e.getLocalizedMessage());
+            return false;
+        }
+        try {
+            dados = new ContentValues();
+            dados.put("descricao", "Metro");
+            dados.put("sigla", "M");
+            dados.put("precisao", 2);
+            db.insert("unidade",null,dados);
+            dados.clear();
+            Log.i("OnInsert","Insert Unidade criada com sucesso!");
+        }catch (SQLException e){
+            Log.e("OnInsert","Insert Unidade: "+e.getLocalizedMessage());
+            return false;
+        }
+        try {
+            dados = new ContentValues();
+            dados.put("descricao", "CATEGORIA TESTE");
+            dados.put("cor", "#FF4500");
+            dados.put("status", true);
+            db.insert("categoria",null,dados);
+            dados.clear();
+            Log.i("OnInsert","Insert Categoria criada com sucesso!");
+        }catch (SQLException e){
+            Log.e("OnInsert","Insert Categoria: "+e.getLocalizedMessage());
+            return false;
+        }
+        try {
+            dados = new ContentValues();
+            dados.put("descricao", "PRODUTO TESTE");
+            dados.put("preco", "5");
+            dados.put("quantestoque", "0");
+            dados.put("codigoean", "");
+            dados.put("precovariavel", true);
+            dados.put("idunidade", 1);
+            dados.put("imagem", "");
+            dados.put("idcategoria", 1);
+            dados.put("status", true);
+            db.insert("produto",null,dados);
+            dados.clear();
+            Log.i("OnInsert","Insert Produto criada com sucesso!");
+        }catch (SQLException e){
+            Log.e("OnInsert","Insert Produto: "+e.getLocalizedMessage());
             return false;
         }
         return true;

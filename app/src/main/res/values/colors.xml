@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="blue_categ">#191970</color>
+
+    <color name="btnorcamento">#FF9800</color>
+    <color name="colorPrimary">#1A9D13</color>
+    <color name="colorPrimaryDark">#1F6130</color>
+    <color name="orcamento">#4682B4</color>
+    <color name="selecionado">#269636</color>
+    <color name="semfoco">#747372</color>
 </resources>
